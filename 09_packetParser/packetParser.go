@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	device       string = "wls1"
+	device       string = "enp0s31f6"
 	snapshot_len int32  = 1024
 	promiscuous  bool   = false
 	err          error
@@ -65,6 +65,6 @@ func printRecord(src string, dst string) {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("[+] SRC: %v, %v\n", recordSRC.City.Names["ru"], recordSRC.Country.Names["ru"])
-	fmt.Printf("[+] DST: %v, %v\n", recordDST.City.Names["ru"], recordDST.Country.Names["ru"])
+	fmt.Printf("[+] SRC: %v, %v\n", recordSRC.City.Names["en"], recordSRC.Country.Names["en"])
+	fmt.Printf("[+] DST: %v, %v\n", recordDST.City.Names["en"], recordDST.Country.Names["en"])
 }
